@@ -10,9 +10,20 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Microservices", "Microservi
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Presentation", "Presentation", "{BE5CF9BE-96A5-4FDA-92DD-67BDDD1698FE}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MicroRabbit.Domain.Core", "MicroRabbit.Domain.Core\MicroRabbit.Domain.Core.csproj", "{90364776-5FF9-4162-A717-96CADE61BA30}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{90364776-5FF9-4162-A717-96CADE61BA30} = {5894DAD6-0F90-4E43-9481-4A1B90965BEB}
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{90364776-5FF9-4162-A717-96CADE61BA30}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{90364776-5FF9-4162-A717-96CADE61BA30}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{90364776-5FF9-4162-A717-96CADE61BA30}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{90364776-5FF9-4162-A717-96CADE61BA30}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
