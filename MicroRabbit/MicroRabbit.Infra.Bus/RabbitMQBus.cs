@@ -27,7 +27,7 @@ public sealed class RabbitMQBus : IEventBus
         return _mediator.Send(command);
     }
 
-    public async void Publish<T>(T @event) where T : Event
+    public async Task Publish<T>(T @event) where T : Event
     {
         var factory = new ConnectionFactory() { HostName = "localhost" };
         using (var connection = await factory.CreateConnectionAsync())
