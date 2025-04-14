@@ -29,7 +29,7 @@ public sealed class RabbitMQBus : IEventBus
 
     public async Task Publish<T>(T @event) where T : Event
     {
-        var factory = new ConnectionFactory() { HostName = "localhost" };
+        var factory = new ConnectionFactory() { HostName = "127.0.0.1" };
         using (var connection = await factory.CreateConnectionAsync())
         using (var channel = await connection.CreateChannelAsync())
         {
@@ -40,7 +40,7 @@ public sealed class RabbitMQBus : IEventBus
             var message = JsonConvert.SerializeObject(@event);
             var body = Encoding.UTF8.GetBytes(message);
             
-            await channel.BasicPublishAsync(eventName, null, body);
+            await channel.BasicPublishAsync("", eventName, body);
         }
     }
 
